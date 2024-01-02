@@ -288,3 +288,19 @@ zlib                      1.2.13               h8cc25b3_0
 zstandard                 0.19.0          py311h2bbff1b_0
 zstd                      1.5.5                hd43e919_0
 ```
+
+##  **Experimental Design**
+We applied the previously mentioned models to our dataset, in order to evaluate which one would be more useful. The criterion that was choosen for this was a specific metric: the F1 score. The reason why this is the best option is because it combines precision and recall, giving a good representation of the performance of the model for this binary classification task. Particularly, we wanted to avoid non-spam messages from being classified as spam, while also making it so that fraudolent texts do not reach the average unexperienced user. We also take a look at the accuracy of each model.
+
+## **Results**
+Considering what we have said until this point, we believe that the best model for our task is the Logistic Regression model. The main reasons that led us to this decision can be summed up as follows:
+
+*   While the model is quite overfitting - as we can see by looking at the performance on the Training set - the accuracy obtained on the Test set is incredibly good.
+
+*   After tuning the C parameter, we obtain very good results on the classification task, with a number of false positives equal to 0 and just 10 false negatives. This is the best outcome that we obtain across all the models that we have taken into consideration.
+
+*   Additionally, the F1 score, which was the main discriminant for this analysis, is very high.
+
+## **Conclusions**
+
+While our work tries to obtain the best results considered the task that was initially given, there is still a margin of improvement. In fact, our solution is only capable of performing a first basic classification process, which could still be improved for the sake of the final user. We believe that the next logic step would be to take into consideration the most dangerous type of fraudolent messages, particularly those that contain phone numbers or links, which could be used to extract private and sensitive information to the receiver. What should be done is to prioritize the analysis of text messages that include this type of flags, making it so that this specific type of messages do not end up becoming false negatives, ever. While our code does not actually define these *dangerous messages*, we still believe that this is a matter that should be addressed in the future.
