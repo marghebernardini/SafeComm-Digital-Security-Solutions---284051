@@ -293,7 +293,7 @@ zstd                      1.5.5                hd43e919_0
 We applied the previously mentioned models to our dataset, in order to evaluate which one would be more useful. The criterion that was choosen for this was a specific metric: the F1 score. The reason why this is the best option is because it combines precision and recall, giving a good representation of the performance of the model for this binary classification task. Particularly, we wanted to avoid non-spam messages from being classified as spam, while also making it so that fraudolent texts do not reach the average unexperienced user. We also take a look at the accuracy of each model.
 
 ## **Results**
-Considering what we have said until this point, we believe that the best model for our task is the Logistic Regression model. The main reasons that led us to this decision can be summed up as follows:
+Considering what we have said until this point, we believe that the best model for our task is the Logistic Regression model (see picture in the images folder). The main reasons that led us to this decision can be summed up as follows:
 
 *   While the model is quite overfitting - as we can see by looking at the performance on the Training set - the accuracy obtained on the Test set is incredibly good.
 
